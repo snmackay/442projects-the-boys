@@ -29,4 +29,7 @@ def create_app(test_config=None):
     def hello():
         return 'It would be extremely painful, for youuuu'
 
+    from . import leaderboards
+    app.register_blueprint(leaderboards.bp)
+
     return app
